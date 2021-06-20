@@ -1,0 +1,116 @@
+@font-face{
+    font-family:'Glyphicons Halflings';
+    src:url(../fonts/glyphicons-halflings-regular.ttf) format('truetype')
+}
+
+.glyphicon {
+    position:relative;top:1px;
+    display:inline-block;
+    font-family:'Glyphicons Halflings';
+    font-style:normal;
+    font-weight:400;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale
+}
+
+.glyphicon-chevron-up:before{content:"\e113"}
+
+.glyphicon-chevron-down:before{content:"\e114"}
+
+#calendar-container {
+    padding: 10px;
+    background-color: #2D2725;
+    display: inline-grid;
+    font-family: Arial, sans-serif;
+}
+
+#calendar {
+    max-height: border-box;
+    width: 280px;
+    color: aliceblue;
+    background-color: #2D2725;
+}
+
+#calendar-grid {
+    overflow: hidden;
+    max-height: 240px;
+    user-select: none;
+}
+
+.dayGrid {
+    display: inline-block;
+    min-width: 40px;
+    min-height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dayGrid:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+
+#week {
+    margin: 0 auto;
+    user-select: none;
+}
+
+#week > span {
+    float: left; /*Задаем обтекание*/
+    line-height: 40px;/*Высота строки +  верт. центрирования текста*/
+    width: 40px; /*Фиксируем ширину блока*/
+    text-align: center; /*Центрируем текст по горизонтали*/
+    color: aliceblue;
+}
+
+#week:last-child {
+    margin-right: 0;
+}
+
+.currentDay {
+    background-color: #0078D7;
+}
+
+#currentDateText {
+    text-align: center;
+}
+
+.nav-month > span {
+    color: white;
+    cursor: pointer;
+}
+
+.nav-month > span:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+
+#nav-panel {
+    max-width: 280px;
+    background-color: #2D2725;
+    user-select: none;
+}
+
+.nav-month {
+    display: block;
+    text-align: right;
+}
+.nav-month > span {
+    margin: 5px;
+}
+
+.dayAnotherMonth {
+    color: #67625E;
+}
+
+div[selected] {
+    background-color: #67625E;
+}
+div.dayAnotherMonth[dayAnotherMonth][selected] {
+    background-color: #67625E;
+    color: aliceblue;
+}
